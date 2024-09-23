@@ -33,7 +33,7 @@ Uma API RESTful para gerenciamento de centros comunitários, permitindo a troca 
    docker build --progress=plain --no-cache -t community-center:latest .
    docker-compose up
 
-3. **Segunda Opção utilizando o Makefile:**
+2.1. **Segunda Opção utilizando o Makefile:**
     ```bash
     make build
     make run
