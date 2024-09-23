@@ -2,10 +2,12 @@ package com.community_center.community_center.domain.repository;
 
 import com.community_center.community_center.domain.entity.CommunityCenter;
 import com.community_center.community_center.utils.Result;
-import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 
-public interface CommunityCenterRepository extends MongoRepository<CommunityCenter, String> {
-    Result<List<CommunityCenter>> listByCurrentOccupancy(int occupancy);
+public interface CommunityCenterRepository {
+    Result<List<CommunityCenter>> listCommunityCentersByOccupancyAtLeast(double occupancy, int page, int size);
+    Result<List<CommunityCenter>> findAll();
+    Result<CommunityCenter> save(CommunityCenter center);
+    Result<CommunityCenter> findById(String centerId);
 }

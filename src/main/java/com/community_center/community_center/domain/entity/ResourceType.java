@@ -1,5 +1,8 @@
 package com.community_center.community_center.domain.entity;
 
+import lombok.Getter;
+
+@Getter
 public enum ResourceType {
     DOCTOR(4),
     VOLUNTEER(3),
@@ -13,7 +16,4 @@ public enum ResourceType {
         this.points = points;
     }
 
-    public int getPoints() {
-        return this.points;
-    }
 }

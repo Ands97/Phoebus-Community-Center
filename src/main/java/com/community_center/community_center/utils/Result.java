@@ -30,4 +30,13 @@ public class Result<T> {
         result.setData(response);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Result{" +
+                "success=" + success +
+                ", response=" + response +
+                ", error=" + error +
+                '}';
+    }
 }

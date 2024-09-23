@@ -1,13 +1,17 @@
 package com.community_center.community_center.application.dto;
 
 import com.community_center.community_center.domain.entity.Location;
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
+@Schema(description = "Community Center")
 public class CommunityCenterDTO {
-    private String id;
     @NotBlank
     private String name;
     @NotNull

@@ -1,20 +1,17 @@
 package com.community_center.community_center.utils.error;
 
+import lombok.Data;
+
 import java.util.List;
 
-class ErrorApplicationDetails {
-    public String name;
-    public String description;
-    public String code;
-}
-
+@Data
 public class ErrorApplication {
     private String process;
     private String message;
     private int code;
     private List<ErrorApplicationDetails> details;
 
-    ErrorApplication(
+    public ErrorApplication(
             String process,
             String message,
             int code,
